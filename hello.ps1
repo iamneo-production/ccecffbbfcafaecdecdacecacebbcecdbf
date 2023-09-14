@@ -1,1 +1,2 @@
-write - host "hello world"
+write-host "hello world"
+"hello world"  |  write-host

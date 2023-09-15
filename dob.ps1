@@ -5,10 +5,9 @@ $day = [int]$day
 $month = [int]$month
 $year = [int]$year
 
-if ($day -match '^\d{1,2}$' -and $month -match '^\d{1,2}$' -and $year - match '^\d{4}$') {
-    $dateString = $day.PadLeft(2, '0') + '-' + $month
-
-    $formattedDate = $dateOfBirth.ToString("dd-MM-yyyy")
+if ($day -ge 1 -and $day -le 31 -and $month -ge 1 -and $month -le 12 -and $year -ge 1900 -and $year -le 2099) {
+    $dateString = "{0:D2}-"
+    
 
     Write-Host "Date of Birth: $dateString"
 }else{
